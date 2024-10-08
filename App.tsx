@@ -5,16 +5,14 @@ import { TouchableOpacity, Image, ScrollView, StyleSheet, Text, View, TextInput 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRef, useEffect } from 'react';
 import { Animated } from 'react-native';
-import { RadioButton } from 'react-native-paper';
-import { SelectList } from 'react-native-dropdown-select-list';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Landing">
-        <Stack.Screen name="Landing" component={LandingPage} />
+      <Stack.Navigator initialRouteName="Main Screen">
+        <Stack.Screen name="MainScreen" component={LandingPage} />
         <Stack.Screen name="Subscription" component={SubscriptionPage} />
         <Stack.Screen name="Welcome" component={WelcomePage} />
       </Stack.Navigator>
@@ -224,7 +222,7 @@ function WelcomePage({ route }) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
